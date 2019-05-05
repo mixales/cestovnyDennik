@@ -1,16 +1,17 @@
 package cestovnydennik.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
-@Entity(name="t_records")
-public class TravelRecord {
+@Entity(name="travelrecords")
+public class TravelRecord implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String vozidlo;
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date datum;
     private String cesta_start;
     private String cesta_ciel;
@@ -18,6 +19,8 @@ public class TravelRecord {
     private Date cas_ciel;
     private Date cas_praca_zaciatok;
     private Date cas_praca_koniec;
+
+    public TravelRecord() {}
 
     public TravelRecord(String vozidlo, Date datum, String cesta_start, String cesta_ciel, Date cas_start, Date cas_ciel, Date cas_praca_zaciatok, Date cas_praca_koniec) {
         this.vozidlo = vozidlo;
