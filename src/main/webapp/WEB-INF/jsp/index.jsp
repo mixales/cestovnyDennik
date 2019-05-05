@@ -76,6 +76,33 @@
                 </div>
             </div>
 
+            <div class="container">
+                <div class="my-3 p-3 bg-white rounded shadow-sm">
+                    <h6 class="border-bottom border-gray pb-2 mb-0">Informácie o cestových príkazoch</h6>
+
+                    <div class="row mt-3 mb-3 text-center">
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary">
+                                Celkový počet záznamov <span class="badge badge-light">4</span>
+                            </button>
+                        </div>
+
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary">
+                                Celkový počet kilometrov <span class="badge badge-light">4</span>
+                            </button>
+                        </div>
+
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary">
+                                Suma náhrad za tento rok <span class="badge badge-light">4</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </c:when>
         <c:when test="${mode == 'MODE_NEW' || mode == 'MODE_EDIT'}">
 

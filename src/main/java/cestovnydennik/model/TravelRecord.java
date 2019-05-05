@@ -3,6 +3,8 @@ package cestovnydennik.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Time;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static java.lang.Math.round;
