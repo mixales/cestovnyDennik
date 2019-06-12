@@ -21,6 +21,12 @@ public class MainController {
     @GetMapping("/")
     public String home(HttpServletRequest request) {
         request.setAttribute("travelRecords", travelRecordService.findAll());
+
+        request.setAttribute("celkove", travelRecordService.getRecordCount());
+        request.setAttribute("kilometre", travelRecordService.getKilometersCount());
+        request.setAttribute("kilometre_rok", travelRecordService.getKilometersCountYear());
+        request.setAttribute("nahrady_rok", travelRecordService.getNahradyYear());
+
         request.setAttribute("mode", "MODE_HOME");
         return "index";
     }
@@ -43,6 +49,7 @@ public class MainController {
     public String edit(@RequestParam int id, HttpServletRequest request) {
         request.setAttribute("travelRecord", travelRecordService.findTravelRecord(id));
         request.setAttribute("mode", "MODE_EDIT");
+        request.setAttribute("datumNF", travelRecordService.dateToString(id));
         return "index";
     }
 
