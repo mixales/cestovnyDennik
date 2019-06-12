@@ -1,9 +1,12 @@
 package cestovnydennik.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Time;
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -64,6 +67,7 @@ public class TravelRecord implements Serializable {
     }
 
     public Date getDatum() {
+
         return datum;
     }
 

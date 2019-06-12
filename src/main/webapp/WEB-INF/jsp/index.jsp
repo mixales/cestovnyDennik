@@ -83,19 +83,25 @@
                     <div class="row mt-3 mb-3 text-center">
                         <div class="col-md-3">
                             <button type="button" class="btn btn-primary">
-                                Celkový počet záznamov <span class="badge badge-light">4</span>
+                                Počet záznamov <span class="badge badge-light">${celkove}</span>
                             </button>
                         </div>
 
                         <div class="col-md-3">
                             <button type="button" class="btn btn-primary">
-                                Celkový počet kilometrov <span class="badge badge-light">4</span>
+                                Kilometrov celkovo <span class="badge badge-light">${kilometre}</span>
                             </button>
                         </div>
 
                         <div class="col-md-3">
-                            <button type="button" class="btn btn-primary">
-                                Suma náhrad za tento rok <span class="badge badge-light">4</span>
+                            <button type="button" class="btn btn-info">
+                                Kilometre (tento rok) <span class="badge badge-light">${kilometre_rok}</span>
+                            </button>
+                        </div>
+
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-info">
+                                Náhrady (tento rok) <span class="badge badge-light">${nahrady_rok}</span>
                             </button>
                         </div>
                     </div>
@@ -124,7 +130,7 @@
                     <div class="form-group row">
                         <label for="datepicker" class="col-form-label col-md-3">Dátum</label>
                         <div class="col-sm-3">
-                            <input type="text" class="form-control" id="datepicker" name="datum" value="${travelRecord.datum}"/>
+                            <input type="text" class="form-control" id="datepicker" name="datum" value="${datumNF}"/>
                         </div>
                     </div>
 
@@ -207,7 +213,7 @@
 
     <script>
         $( function() {
-            $("#datepicker").datepicker();
+            $("#datepicker").datepicker({ 'dateFormat': 'mm/dd/yy'});
             $('#timepick1').timepicker({ 'timeFormat': 'H:i:s' });
             $('#timepick2').timepicker({ 'timeFormat': 'H:i:s' });
             $('#timepick3').timepicker({ 'timeFormat': 'H:i:s' });
